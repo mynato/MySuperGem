@@ -8,16 +8,19 @@ jobs:
     steps:
       - checkout
   test1:
+    working_directory: ~/
     docker:
       - image: circleci/ruby:latest
     steps:
       - run: echo test1
   test2:
+    working_directory: ~/
     docker:
       - image: circleci/ruby:latest
     steps:
       - run: echo test2
   test3:
+    working_directory: ~/
     docker:
       - image: circleci/ruby:2
     steps:
