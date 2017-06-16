@@ -8,12 +8,18 @@ jobs:
     steps:
       - checkout
   test1:
+    docker:
+      - image: circleci/ruby:latest
     steps:
       - run: echo test1
   test2:
+    docker:
+      - image: circleci/ruby:latest
     steps:
       - run: echo test2
   test3:
+    docker:
+      - image: circleci/ruby:2
     steps:
       - run: echo test3
       # Run rspec in parallel
