@@ -27,6 +27,7 @@ jobs:
       - checkout
       - run: echo test3
       # Run rspec in parallel
+      - run: bundle install --path=vendor
       - type: shell
         command: |
           bundle exec rspec --profile 10 \
