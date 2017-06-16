@@ -10,7 +10,7 @@ jobs:
       script:
         - echo one one
         - echo two two
-      script:
+    - script:
         - echo one one one
         - echo two two two
     - stage: deploy
