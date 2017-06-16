@@ -3,3 +3,17 @@ language: ruby
 rvm:
   - 2.3.3
 before_install: gem install bundler -v 1.15.1
+
+jobs:
+  include:
+    - stage: my first stage
+      script:
+        - echo one one
+        - echo two two
+      script:
+        - echo one one one
+        - echo two two two
+    - stage: deploy
+      script:
+        - one
+
