@@ -15,5 +15,5 @@ jobs:
         - echo two two two
     - stage: deploy
       script:
-        - one
+        - echo deploy end!
 
