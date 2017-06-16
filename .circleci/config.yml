@@ -2,7 +2,7 @@ version: 2
 
 jobs:
   build:
-    working_directory: ~/
+    working_directory: .
     docker:
       - image: circleci/ruby:latest
     steps:
@@ -20,7 +20,7 @@ jobs:
     steps:
       - run: echo test2
   test3:
-    working_directory: ~/
+    working_directory: .
     docker:
       - image: circleci/ruby:2
     steps:
