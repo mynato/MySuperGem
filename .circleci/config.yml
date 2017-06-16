@@ -39,11 +39,22 @@ jobs:
       # Save artifacts
       - type: store_test_results
         path: /tmp/test-results
+  test4:
+    working_directory: ~/
+    docker:
+      - image: circleci/ruby:latest
+    steps:
+      - run: echo test4
+
 workflows:
   version: 2
   build_and_test:
     jobs:
       - build
       - test1
-      - test2
+      - test2:
+        requires: [build]
       - test3
+        requires: [test1]
+      - test4
+        requires: [test3]
