@@ -44,7 +44,7 @@ jobs:
     docker:
       - image: circleci/ruby:latest
     steps:
-      - run: echo test4
+      - run: echo test4 dayo
 
 workflows:
   version: 2
